@@ -1,162 +1,122 @@
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,30:0a192f,70:0a192f,100:000000&height=250&section=header&text=PRAJWAL%20PATIL&fontSize=75&fontColor=64ffda&fontAlignY=42&desc=%E3%80%8E%20Full%20Stack%20Developer%20%C2%B7%20React%20%C2%B7%20Flask%20%C2%B7%20Spring%20Boot%20%C2%B7%20MySQL%20%E3%80%8F&descAlignY=62&descSize=14&descColor=8892b0&animation=twinkling&stroke=64ffda&strokeWidth=2" width="100%"/>
-
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=800&size=18&duration=2000&pause=500&color=64FFDA&center=true&vCenter=true&width=620&lines=%E2%9A%A1+Shipping+production+features+daily+%40+MINE+IT;%F0%9F%94%90+JWT+%2B+RBAC+Security+Architecture;%F0%9F%97%83%EF%B8%8F+MySQL+%C2%B7+Schema+Design+%C2%B7+Query+Optimisation;%F0%9F%8E%8C+Anime+fan+who+codes+in+production;%F0%9F%9A%80+Requirement+%E2%86%92+Deployment+%E2%86%92+Shipped." alt="Typing SVG" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0e1a,50:111827,100:1e2a45&height=200&section=header&text=Prajwal%20Patil&fontSize=48&fontColor=f8fafc&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=56&descSize=17&descColor=94a3b8&animation=fadeIn" width="100%"/>
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0a192f?style=for-the-badge&logo=linkedin&logoColor=64ffda)](https://linkedin.com/in/prajwal-patil16)
-[![GitHub](https://img.shields.io/badge/GitHub-0a192f?style=for-the-badge&logo=github&logoColor=64ffda)](https://github.com/prajwalpatil16)
-[![Gmail](https://img.shields.io/badge/Gmail-0a192f?style=for-the-badge&logo=gmail&logoColor=64ffda)](mailto:prajwalgpatil2002@gmail.com)
-[![Live](https://img.shields.io/badge/Live_Projects-0a192f?style=for-the-badge&logo=vercel&logoColor=64ffda)](https://prajwal-hoster.netlify.app)
+<img src="https://skillicons.dev/icons?i=react,ts,js,py,flask,java,spring,mysql,tailwind,git&theme=dark" />
 
-![](https://komarev.com/ghpvc/?username=prajwalpatil16&color=64ffda&style=flat-square&label=👁+views)
+<br/><br/>
 
-</div>
-
----
-
-## ⚡ ` whoami`
-
-```python
-class PrajwalPatil:
-    tagline  = "『 I don't write features. I ship outcomes. 』"
-    role     = "Full Stack Developer"
-    company  = "MINE IT → SwiftBIM  [ Live B2B SaaS · Real Clients ]"
-    base     = "Bengaluru, India 🇮🇳"
-    loves    = ["Anime 🎌", "Clean Code 🧹", "Shipping to Production 🚀"]
-
-    stack    = {
-        "frontend" : ["React.js", "JavaScript", "Tailwind CSS"],
-        "backend"  : ["Python/Flask", "Java/Spring Boot"],
-        "database" : ["MySQL", "Schema Design"],
-        "security" : ["JWT", "RBAC", "REST APIs"],
-    }
-    learning = ["Docker 🐳", "AWS ☁️", "CI/CD ⚙️"]
-    status   = "💼 Open to Full Stack · Frontend · Backend roles"
-```
-
----
-
-## Arsenal
-
-<div align="center">
-
-![React](https://img.shields.io/badge/React-0a192f?style=for-the-badge&logo=react&logoColor=61DAFB)
-![JavaScript](https://img.shields.io/badge/JavaScript-0a192f?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Tailwind](https://img.shields.io/badge/Tailwind-0a192f?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4)
-![Python](https://img.shields.io/badge/Python-0a192f?style=for-the-badge&logo=python&logoColor=3776AB)
-![Flask](https://img.shields.io/badge/Flask-0a192f?style=for-the-badge&logo=flask&logoColor=ffffff)
-![Java](https://img.shields.io/badge/Java-0a192f?style=for-the-badge&logo=openjdk&logoColor=ED8B00)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-0a192f?style=for-the-badge&logo=springboot&logoColor=6DB33F)
-![MySQL](https://img.shields.io/badge/MySQL-0a192f?style=for-the-badge&logo=mysql&logoColor=4479A1)
-![Git](https://img.shields.io/badge/Git-0a192f?style=for-the-badge&logo=git&logoColor=F05032)
-![Postman](https://img.shields.io/badge/Postman-0a192f?style=for-the-badge&logo=postman&logoColor=FF6C37)
-![Docker](https://img.shields.io/badge/Docker-0a192f?style=for-the-badge&logo=docker&logoColor=2496ED)
-![AWS](https://img.shields.io/badge/AWS-0a192f?style=for-the-badge&logo=amazonaws&logoColor=FF9900)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-111827?style=for-the-badge&logo=linkedin&logoColor=60a5fa)](https://linkedin.com/in/prajwal-patil16)
+[![Email](https://img.shields.io/badge/Email-111827?style=for-the-badge&logo=gmail&logoColor=60a5fa)](mailto:prajwalgpatil2002@gmail.com)
+[![GitHub](https://img.shields.io/badge/Bengaluru%2C_India-111827?style=for-the-badge&logo=googlemaps&logoColor=60a5fa)](#)
 
 </div>
 
----
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e2a45,100:0a0e1a&height=2&section=header" width="100%"/>
 
-## Shipped — Problems → Production
+<br/>
 
-<table>
+### About
+
+Full Stack Developer working across Java, Spring Boot, Python/Flask, React, and MySQL — currently at **MINE**, digitizing core business workflows and building CMS platforms that non-engineering teams run independently.
+
+The part I care about most rarely shows up in a demo: schema design that holds up under concurrency, transactions that are actually atomic, access control that's enforced rather than assumed. The work below reflects that.
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e2a45,100:0a0e1a&height=2&section=header" width="100%"/>
+
+<br/>
+
+### Featured Work
+
+<table width="100%">
 <tr>
-<td width="50%" valign="top">
+<td width="100%">
 
-### Healthcare Management System
-`React · Flask · MySQL · JWT`
+**Lumière** — Full-Stack E-Commerce Platform
+<br/>
+<sub>React 19 · Flask · MySQL · JWT · Razorpay</sub>
 
-> Hospitals drowning in paper — no access control, no digital records.
+Normalized 25-table schema modeling product variants, SKUs, and order state. Hand-written raw-SQL transaction layer for atomic checkout, instead of an ORM papering over concurrency. Three-tier RBAC with a hashed, time-expiring staff invite flow.
 
-Role-isolated dashboards for **Doctor · Patient · Admin** with JWT + RBAC. Appointments, prescriptions, billing — all shipped.
-
-[![](https://img.shields.io/badge/View_Repo→-0a192f?style=for-the-badge&logo=github&logoColor=64ffda)](https://github.com/prajwalpatil16/healthcare-management-system)
-
-</td>
-<td width="50%" valign="top">
-
-###  Hoster — SaaS Platform
-`React · Flask · MySQL · JWT` · 🟢 **Live**
-
-> Teams need hosting dashboards without enterprise pricing.
-
-Multi-role SaaS with **real-time CPU/RAM monitoring**, billing, invoices & CMS admin — live now.
-
-[![](https://img.shields.io/badge/View_Repo→-0a192f?style=for-the-badge&logo=github&logoColor=64ffda)](https://github.com/prajwalpatil16/hoster-web)
-[![](https://img.shields.io/badge/Live_Demo→-0a192f?style=for-the-badge&logo=vercel&logoColor=64ffda)](https://prajwal-hoster.netlify.app)
+→ [github.com/prajwalpatil16/Lumiere_Offical_Store](https://github.com/prajwalpatil16/Lumiere_Offical_Store)
 
 </td>
 </tr>
+<tr><td><br/></td></tr>
 <tr>
-<td width="50%" valign="top">
+<td width="100%">
 
-### Siddashree Institute
-`React · Tailwind CSS` · 🟢 **Live at siddashree.org**
+**TestDesk** — QA & Bug Tracking Platform
+<br/>
+<sub>React (TypeScript) · Flask · MySQL</sub>
 
-> Real institution. No online presence. Losing students.
+Enterprise-style test case management and defect tracking, positioned against Jira and BugHerd. Real-time team chat module built from scratch, Kanban workflows, project-scoped role-based access.
 
-Responsive production site — live and serving real traffic.
-
-[![](https://img.shields.io/badge/Live_Demo→-0a192f?style=for-the-badge&logo=vercel&logoColor=64ffda)](https://siddashree.org)
+→ [github.com/prajwalpatil16/TestDesk](https://github.com/prajwalpatil16/TestDesk)
 
 </td>
-<td width="50%" valign="top">
+</tr>
+<tr><td><br/></td></tr>
+<tr>
+<td width="100%">
 
-### Cloth Store — E-Commerce
-`React · Flask · MySQL`
+**Notely** — AI-Powered Note-Taking Workspace
+<br/>
+<sub>React 19 · Flask · Google Gemini API</sub>
 
-> Full purchase flow — auth, catalog, cart, checkout — end to end.
+RAG-based AI chat grounded in the user's own notes, semantic search with keyword fallback, and a force-directed knowledge graph connecting related notes.
 
-[![](https://img.shields.io/badge/View_Repo→-0a192f?style=for-the-badge&logo=github&logoColor=64ffda)](https://github.com/prajwalpatil16)
+→ [github.com/prajwalpatil16/notely](https://github.com/prajwalpatil16/notely)
+
+</td>
+</tr>
+<tr><td><br/></td></tr>
+<tr>
+<td width="100%">
+
+**Siddashree Institute** — Live Production Website & Management System
+<br/>
+<sub>React · Tailwind CSS</sub>
+
+Deployed for a real educational institution — public site plus role-based workflows for day-to-day academic and administrative operations.
+
+→ [siddashree.org](https://siddashree.org)
 
 </td>
 </tr>
 </table>
 
----
+<br/>
 
-##  Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=prajwalpatil16&show_icons=true&hide_border=true&bg_color=0a192f&title_color=64ffda&icon_color=64ffda&text_color=8892b0&include_all_commits=true&count_private=true" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=prajwalpatil16&layout=compact&hide_border=true&bg_color=0a192f&title_color=64ffda&text_color=8892b0" height="165"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e2a45,100:0a0e1a&height=2&section=header" width="100%"/>
 
 <br/>
 
-[![streak](https://streak-stats.demolab.com?user=prajwalpatil16&hide_border=true&background=0a192f&stroke=64ffda&ring=64ffda&fire=ff6b35&currStreakLabel=64ffda&sideLabels=8892b0&dates=8892b0)](https://git.io/streak-stats)
-
-</div>
-
----
-
-## Naruto — _"A ninja never gives up on their nindo!"_
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%"/>
-</picture>
-
-> _Just like Naruto trained every day to become Hokage — every green square above is one more day of building. 🍃_
-
----
+### Activity
 
 <div align="center">
 
-```
-  ╔══════════════════════════════════════════════════════╗
-  ║  『 Real clients. Real code. Real production. 』     ║
-  ║      Bengaluru 📍  ·  Open to work 💼               ║
-  ╚══════════════════════════════════════════════════════╝
-```
+<img src="https://github-readme-stats.vercel.app/api?username=prajwalpatil16&show_icons=true&hide_border=true&bg_color=0a0e1a&title_color=60a5fa&icon_color=60a5fa&text_color=cbd5e1&include_all_commits=true&count_private=true" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=prajwalpatil16&layout=compact&hide_border=true&bg_color=0a0e1a&title_color=60a5fa&text_color=cbd5e1" height="165"/>
 
-[![LinkedIn](https://img.shields.io/badge/Let's_Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/prajwal-patil16)
-[![Email](https://img.shields.io/badge/Send_Mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:prajwalgpatil2002@gmail.com)
+</div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:0a192f,100:64ffda&height=120&section=footer" width="100%"/>
+<br/>
 
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e2a45,100:0a0e1a&height=2&section=header" width="100%"/>
+
+<div align="center">
+<br/>
+
+**Open to Full Stack and Backend-leaning roles**
+
+[![LinkedIn](https://img.shields.io/badge/Connect-111827?style=for-the-badge&logo=linkedin&logoColor=60a5fa)](https://linkedin.com/in/prajwal-patil16)
+[![Email](https://img.shields.io/badge/prajwalgpatil2002%40gmail.com-111827?style=for-the-badge&logo=gmail&logoColor=60a5fa)](mailto:prajwalgpatil2002@gmail.com)
+
+<br/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0e1a,50:111827,100:1e2a45&height=100&section=footer" width="100%"/>
 </div>
