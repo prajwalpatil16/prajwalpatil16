@@ -1,139 +1,160 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, ExternalLink, Code2 } from 'lucide-react';
-
+import { Mail, Phone, ExternalLink, ArrowDown, FolderGit2 } from 'lucide-react';
 
 export interface EditorialHeroProps {
   onExploreMissions?: () => void;
+  onGoToContact?: () => void;
 }
 
-export const EditorialHero: React.FC<EditorialHeroProps> = ({ onExploreMissions }) => {
+export const EditorialHero: React.FC<EditorialHeroProps> = ({
+  onExploreMissions,
+  onGoToContact,
+}) => {
   return (
-    <section className="relative w-full bg-[var(--bg-paper)] text-[var(--text-charcoal)] border-b-2 border-editorial-heavy overflow-hidden select-none">
-      {/* 1. GIANT POSTER TITLE BANNER */}
-      <div className="relative pt-6 sm:pt-10 px-4 sm:px-8 text-center overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="space-y-1 sm:space-y-2"
-        >
-          <div className="font-mono-code text-xs sm:text-sm font-bold text-[var(--crimson-red)] uppercase tracking-[0.2em]">
-            • FULL STACK SOFTWARE DEVELOPER &amp; ARCHITECT •
-          </div>
-
-          <h1 className="font-antonio text-4xl sm:text-6xl md:text-8xl lg:text-[7vw] font-extrabold text-[var(--crimson-red)] uppercase leading-[0.9] tracking-tight max-w-7xl mx-auto">
-            DEVELOPER &amp; <br className="hidden sm:block" />
-            <span className="text-[var(--text-charcoal)]">SOFTWARE ARCHITECT</span>
-          </h1>
-        </motion.div>
-
-        {/* Minimalist Quotes */}
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 px-4 mt-4 sm:mt-6 mb-4 font-serif-editorial text-xs sm:text-sm text-[var(--text-muted)] italic">
+    <section className="relative w-full bg-[var(--bg-paper)] text-[var(--text-charcoal)] border-b-2 border-editorial-heavy py-16 sm:py-24 px-4 sm:px-6 md:px-8 select-none">
+      <div className="max-w-[1100px] mx-auto space-y-12">
+        {/* 1. Main Headline & Subtitle */}
+        <div className="text-center space-y-4">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-center sm:text-left"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="space-y-3"
           >
-            "Show me a complex system, and I'll write you an elegant architecture."
+            <span className="font-mono-code text-xs sm:text-sm font-bold text-[#B52B27] uppercase tracking-[0.2em] inline-block">
+              PRAJWAL PATIL • BENGALURU, INDIA
+            </span>
+
+            {/* Clear Headline with comfortable line-height so nothing collides */}
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-[#121316] uppercase leading-[1.05] tracking-tight">
+              FULL STACK <span className="text-[#B52B27]">DEVELOPER</span>
+            </h1>
+
+            {/* One-Line Subtitle */}
+            <p className="font-sans-editorial text-base sm:text-lg md:text-xl text-[#4A4A52] max-w-2xl mx-auto leading-relaxed">
+              Building clean, reliable web applications and internal tools with Java, Python, and React.
+            </p>
           </motion.div>
 
+          {/* Two Buttons Only: View Projects & Contact */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-center sm:text-right"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.1, ease: 'easeOut' }}
+            className="flex flex-wrap items-center justify-center gap-3 pt-3"
           >
-            "Obsessed with clean code, resilient backend logic, and practical workflows."
+            <button
+              onClick={onExploreMissions}
+              className="flex items-center gap-2 px-6 py-3 bg-[#121316] text-[#E6DFD3] hover:bg-[#B52B27] hover:text-white font-display text-base font-bold uppercase tracking-wider rounded-xl border-2 border-[#121316] shadow-sm transition-all cursor-pointer btn-press"
+            >
+              <span>VIEW PROJECTS</span>
+              <ArrowDown className="w-4 h-4" />
+            </button>
+
+            <button
+              onClick={onGoToContact}
+              className="flex items-center gap-2 px-6 py-3 bg-[#ECE5D9] text-[#121316] hover:bg-[#121316] hover:text-white font-display text-base font-bold uppercase tracking-wider rounded-xl border-2 border-[#121316] shadow-sm transition-all cursor-pointer btn-press"
+            >
+              <Mail className="w-4 h-4" />
+              <span>GET IN TOUCH</span>
+            </button>
           </motion.div>
         </div>
-      </div>
 
-      {/* 2. EDITORIAL POSTER DOSSIER CENTERPIECE (CLEAN, NO OVERLAPPING WHITE BOX) */}
-      <div className="relative max-w-5xl mx-auto px-4 py-4 sm:py-6 z-20">
+        {/* 2. Structured Profile Overview Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="p-5 sm:p-8 bg-[#ECE5D9] border-2 border-[#121316] rounded-2xl shadow-2xl space-y-6"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.15, ease: 'easeOut' }}
+          className="p-6 sm:p-8 bg-[#ECE5D9] border-2 border-[#121316] rounded-2xl shadow-md space-y-6 card-hover"
         >
-          {/* Header Row */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b-2 border-[#121316] pb-4">
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-[#C81E1E] text-white rounded-lg border border-[#121316]">
-                <Code2 className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="font-mono-code text-[11px] font-bold text-[#C81E1E] tracking-widest uppercase block">
-                  TECHNICAL DOSSIER • 2026
-                </span>
-                <h2 className="font-antonio text-2xl sm:text-3xl font-extrabold text-[#121316] uppercase leading-none">
-                  PRAJWAL PATIL — FULL STACK DEVELOPER
-                </h2>
-              </div>
+          {/* Card Top Row */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#121316]/25 pb-4">
+            <div className="flex items-center gap-2.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#B52B27]" />
+              <span className="font-mono-code text-xs font-bold text-[#121316] tracking-widest uppercase">
+                ENGINEERING PROFILE // OVERVIEW
+              </span>
             </div>
 
-            <div className="flex items-center gap-2 self-start sm:self-auto">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse" />
-              <span className="font-mono-code text-xs font-bold text-emerald-900 bg-emerald-200 px-3 py-1 rounded-md border border-emerald-500">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
+              <span className="font-mono-code text-xs font-bold text-emerald-950 bg-emerald-100 px-2.5 py-0.5 rounded border border-emerald-400">
                 AVAILABLE FOR ROLES
               </span>
             </div>
           </div>
 
-          {/* Core Info Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center font-mono-code text-xs">
-            {/* Column 1: Profile Brief */}
-            <div className="md:col-span-7 space-y-3 font-sans-editorial text-sm text-[#4A4A52]">
-              <p className="font-bold text-[#121316]">
-                "I turn ideas, messy requirements, and complex business workflows into clean, reliable, production-ready products."
+          {/* Grid Information */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+            {/* Left Narrative */}
+            <div className="md:col-span-7 space-y-3">
+              <p className="font-serif-editorial text-base sm:text-lg text-[#121316] font-bold italic leading-relaxed">
+                "I enjoy turning ideas, messy requirements, and real-world problems into products people can actually use."
               </p>
-              <p className="text-xs leading-relaxed text-[#4A4A52]">
-                Full Stack Developer at MINE IT building SwiftBIM's sales-to-delivery automation system, Notely AI Workspace with Gemini RAG, and TestDesk Enterprise SaaS.
+              <p className="font-sans-editorial text-xs sm:text-sm text-[#4A4A52] leading-relaxed">
+                Full Stack Developer at MINE IT working across Java, Python, Flask, React, and MySQL. Building core sales-to-delivery workflows for SwiftBIM and production CMS platforms that internal teams run independently.
               </p>
 
-              {/* Tech Stack Pills */}
-              <div className="flex flex-wrap gap-1.5 pt-2">
-                {['Java', 'Spring Boot', 'Python', 'Flask', 'React 19', 'MySQL', 'Gemini AI', 'REST APIs'].map((t) => (
-                  <span
-                    key={t}
-                    className="px-2.5 py-1 bg-[#E6DFD3] border border-[#121316] font-mono-code text-xs font-bold text-[#121316] rounded"
-                  >
-                    {t}
-                  </span>
-                ))}
+              {/* Verified Tech Stack Tags */}
+              <div className="pt-2">
+                <span className="font-mono-code text-[11px] font-bold text-[#121316] uppercase tracking-wider block mb-2">
+                  PRIMARY TECH STACK:
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    'Java',
+                    'Python',
+                    'JavaScript (ES6+)',
+                    'React.js 19',
+                    'Spring Boot',
+                    'Flask',
+                    'SQL',
+                    'MySQL',
+                    'REST APIs',
+                    'Tailwind CSS',
+                    'Git',
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2.5 py-1 bg-[#E6DFD3] border border-[#121316] font-mono-code text-xs font-bold text-[#121316] rounded-md"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Column 2: Quick Action Buttons */}
-            <div className="md:col-span-5 space-y-3 border-t md:border-t-0 md:border-l border-[#121316]/30 pt-4 md:pt-0 md:pl-6">
-              <div className="font-mono-code text-[11px] font-bold text-[#C81E1E] uppercase tracking-wider">
-                DIRECT CONTACT ACTIONS:
-              </div>
+            {/* Right Contact Details */}
+            <div className="md:col-span-5 space-y-3.5 border-t md:border-t-0 md:border-l border-[#121316]/25 pt-4 md:pt-0 md:pl-6">
+              <span className="font-mono-code text-xs font-bold text-[#B52B27] uppercase tracking-wider block">
+                DIRECT CONTACT:
+              </span>
 
               <a
                 href="mailto:prajwalgpatil2002@gmail.com"
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#C81E1E] text-white font-antonio text-base font-bold uppercase tracking-wider rounded-lg border-2 border-[#121316] hover:bg-[#121316] transition-colors shadow"
+                className="flex items-center gap-2 p-2.5 bg-white border border-[#121316] rounded-lg text-xs font-mono-code font-bold text-[#121316] hover:bg-[#B52B27] hover:text-white transition-colors"
               >
-                <Mail className="w-4 h-4" />
-                <span>EMAIL PRAJWAL</span>
+                <Mail className="w-4 h-4 text-[#B52B27] shrink-0" />
+                <span className="truncate">prajwalgpatil2002@gmail.com</span>
               </a>
 
               <a
                 href="tel:7019609440"
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#121316] text-white font-antonio text-base font-bold uppercase tracking-wider rounded-lg border-2 border-[#121316] hover:bg-[#C81E1E] transition-colors shadow"
+                className="flex items-center gap-2 p-2.5 bg-white border border-[#121316] rounded-lg text-xs font-mono-code font-bold text-[#121316] hover:bg-[#121316] hover:text-white transition-colors"
               >
-                <Phone className="w-4 h-4 text-[#C81E1E]" />
+                <Phone className="w-4 h-4 text-[#B52B27] shrink-0" />
                 <span>+91 7019609440</span>
               </a>
 
-              <div className="flex gap-2">
+              <div className="flex gap-2 pt-1 font-mono-code text-xs font-bold">
                 <a
                   href="https://www.linkedin.com/in/prajwal-patil16/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex-1 flex items-center justify-center gap-1.5 p-2 bg-[#E6DFD3] border border-[#121316] font-mono-code text-xs font-bold text-[#121316] hover:bg-[#C81E1E] hover:text-white rounded transition-colors"
+                  className="flex-1 flex items-center justify-center gap-1.5 p-2 bg-white border border-[#121316] rounded-lg hover:bg-[#121316] hover:text-white transition-colors"
                 >
                   <span>LINKEDIN</span>
                   <ExternalLink className="w-3 h-3" />
@@ -143,77 +164,15 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ onExploreMissions 
                   href="https://github.com/prajwalpatil16"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex-1 flex items-center justify-center gap-1.5 p-2 bg-[#E6DFD3] border border-[#121316] font-mono-code text-xs font-bold text-[#121316] hover:bg-[#121316] hover:text-white rounded transition-colors"
+                  className="flex-1 flex items-center justify-center gap-1.5 p-2 bg-white border border-[#121316] rounded-lg hover:bg-[#121316] hover:text-white transition-colors"
                 >
+                  <FolderGit2 className="w-3.5 h-3.5" />
                   <span>GITHUB</span>
-                  <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
             </div>
           </div>
         </motion.div>
-      </div>
-
-      {/* 3. BASELINE GRID & EDITORIAL COLUMNS */}
-      <div className="relative z-30 border-t-2 border-editorial-heavy pt-4 pb-8 px-4 sm:px-6 md:px-12 bg-[var(--bg-paper)]">
-        {/* Baseline Column Number Markers */}
-        <div className="hidden md:grid grid-cols-12 border-b border-editorial text-[10px] font-mono-code text-[var(--text-muted)] pb-1 mb-4">
-          <div className="col-span-4 md:col-span-3 flex justify-between pr-4 border-r border-editorial">
-            <span>SELECTED LIST OF WORKS</span>
-            <span>01</span>
-          </div>
-          <div className="col-span-2 md:col-span-2 flex justify-end pr-4 border-r border-editorial">
-            <span>02</span>
-          </div>
-          <div className="col-span-3 md:col-span-4 flex justify-between px-4 border-r border-editorial">
-            <span>PHILOSOPHY</span>
-            <span>03</span>
-          </div>
-          <div className="col-span-3 md:col-span-3 flex justify-end pl-4">
-            <span>SIGNATURE</span>
-          </div>
-        </div>
-
-        {/* Column Contents */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-4 items-center">
-          {/* Column 01: Selected List of Works */}
-          <div
-            onClick={onExploreMissions}
-            className="md:col-span-3 space-y-1 font-mono-code text-xs text-[var(--text-charcoal)] pr-4 md:border-r border-editorial cursor-pointer"
-          >
-            <div className="hover:text-[var(--crimson-red)] transition-colors font-bold truncate">
-              • Notely — AI-Powered Workspace (2026)
-            </div>
-            <div className="hover:text-[var(--crimson-red)] transition-colors font-bold truncate">
-              • TestDesk — Enterprise SaaS (2026)
-            </div>
-            <div className="hover:text-[var(--crimson-red)] transition-colors font-bold truncate">
-              • SwiftBIM Sales Automation (2025)
-            </div>
-          </div>
-
-          {/* Column 02: Vertical Red Accent Text */}
-          <div className="hidden md:flex md:col-span-2 justify-center border-r border-editorial h-20 items-center">
-            <span className="font-antonio text-xl text-[var(--crimson-red)] font-bold tracking-widest uppercase [writing-mode:vertical-rl] rotate-180">
-              FULL STACK
-            </span>
-          </div>
-
-          {/* Column 03: Editorial Statement Block */}
-          <div className="md:col-span-4 font-serif-editorial text-xs sm:text-sm text-[var(--text-muted)] leading-relaxed md:px-2 md:border-r border-editorial italic">
-            "Build seriously, debug patiently, learn constantly, and turn complex ideas into software people actually use."
-          </div>
-
-          {/* Column 04: Signature Display Name */}
-          <div className="md:col-span-3 text-left sm:text-right flex flex-col items-start sm:items-end justify-end">
-            <span className="font-antonio text-3xl sm:text-4xl md:text-5xl text-[var(--text-charcoal)] font-bold tracking-tight uppercase leading-none">
-              PRAJWAL PATIL
-            </span>
-            <span className="font-mono-code text-[10px] text-[var(--text-muted)] uppercase tracking-widest mt-1">
-              BENGALURU, KARNATAKA 🇮🇳
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -22,10 +22,10 @@ export const EditorialGridItem: React.FC<EditorialGridItemProps> = ({
 }) => {
   return (
     <motion.div
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -3 }}
       transition={{ duration: 0.2 }}
       onClick={onClick}
-      className={`p-6 bg-[var(--bg-card)] border-2 border-editorial-heavy rounded-xl shadow-lg hover:shadow-2xl transition-all cursor-pointer ${className}`}
+      className={`p-6 bg-[var(--bg-card)] border-2 border-editorial-heavy rounded-xl shadow-sm hover:shadow-md transition-all ${className}`}
     >
       <div className="flex items-center justify-between font-mono-code text-xs text-[var(--text-muted)] mb-2">
         <span className="font-antonio text-3xl text-[var(--crimson-red)] font-bold">{number}</span>

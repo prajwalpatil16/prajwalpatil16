@@ -8,30 +8,28 @@
     --bg-card: #ECE5D9;
     --text-charcoal: #121316;
     --text-muted: #4A4A52;
-    --crimson-red: #C81E1E;
-    --editorial-border: rgba(18, 19, 22, 0.25);
+    --crimson-red: #B52B27;
+    --editorial-border: rgba(18, 19, 22, 0.2);
     --editorial-border-heavy: #121316;
   }
 
   body {
-    background-color: var(--bg-poster-frame);
+    background-color: var(--bg-paper);
     color: var(--text-charcoal);
     font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
   }
 }
 
-/* Typography Utility Classes */
+/* 3 Core Type Families */
+.font-display {
+  font-family: 'Antonio', 'Bebas Neue', sans-serif;
+  letter-spacing: -0.01em;
+}
+
 .font-antonio {
   font-family: 'Antonio', 'Bebas Neue', sans-serif;
   letter-spacing: -0.01em;
-  line-height: 0.85;
-}
-
-.font-bebas {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.04em;
-  line-height: 0.9;
 }
 
 .font-serif-editorial {
@@ -55,10 +53,28 @@
   border-color: var(--editorial-border-heavy);
 }
 
+/* Tactile Card and Button Interactions */
+.card-hover {
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -10px rgba(18, 19, 22, 0.15);
+}
+
+.btn-press {
+  transition: transform 150ms ease, background-color 200ms ease;
+}
+
+.btn-press:active {
+  transform: translateY(1px) scale(0.99);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -66,7 +82,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-charcoal);
+  background: #2D2F36;
   border-radius: 4px;
 }
 

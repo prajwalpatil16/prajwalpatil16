@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
-import { LayoutGrid, List, ArrowUpRight } from 'lucide-react';
-
+import {
+  LayoutGrid,
+  List,
+  ExternalLink,
+  ShoppingBag,
+  CheckSquare,
+  Sparkles,
+  Layers,
+  GraduationCap,
+  FolderGit2
+} from 'lucide-react';
 
 export interface ProjectItem {
   id: string;
@@ -9,216 +18,322 @@ export interface ProjectItem {
   category: string;
   description: string;
   tech: string[];
-  metrics: string;
   github?: string;
+  live?: string;
   features: string[];
+  icon: React.ReactNode;
 }
 
-export const EditorialDatabase: React.FC = () => {
+export interface EditorialDatabaseProps {
+  onExploreDeepDive?: () => void;
+}
+
+export const EditorialDatabase: React.FC<EditorialDatabaseProps> = ({ onExploreDeepDive }) => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const projects: ProjectItem[] = [
     {
-      id: 'notely',
+      id: 'lumiere',
       number: '01',
-      title: 'NOTELY — AI WORKSPACE 🤖',
-      category: 'AI & Full Stack',
-      description: 'Full-stack note-taking app built with Flask + React 19, combining structured knowledge management with a Google Gemini AI layer & force-directed knowledge graph.',
-      tech: ['React 19', 'Python (Flask)', 'Google Gemini AI', 'RAG / Embeddings', 'MySQL', 'Knowledge Graph'],
-      metrics: 'Gemini RAG + Force Graph',
-      github: 'https://github.com/prajwalpatil16/notely',
+      title: 'Lumière',
+      category: 'E-Commerce Platform',
+      description: 'Full-stack retail platform with normalized variant modeling, atomic order checkout, and Razorpay payments.',
+      tech: ['React 19', 'Python', 'Flask', 'MySQL', 'JWT', 'Razorpay'],
+      github: 'https://github.com/prajwalpatil16/Lumiere_Offical_Store',
       features: [
-        'Rich markdown notes, nested folders & tags, pin/archive, version history rollback.',
-        '2D/3D Force-directed knowledge graph linking related notes.',
-        'AI chat companion grounded in user notes (RAG) + smart tag suggestions.',
-        'JWT-based auth with Google OAuth, rate-limited API design, IDOR-safe scoping.',
+        'Normalized 25-table relational schema modeling product variants, SKUs, and order lifecycles.',
+        'Atomic SQL checkout transactions ensuring consistent inventory management.',
+        'Role-based access control with staff invite flows and secure Razorpay integration.',
       ],
+      icon: <ShoppingBag className="w-5 h-5 text-[#B52B27]" />,
     },
     {
       id: 'testdesk',
       number: '02',
-      title: 'TESTDESK — ENTERPRISE SAAS 🛡️',
-      category: 'Enterprise SaaS',
-      description: 'Production-ready enterprise test case management and defect tracking SaaS platform competing with Jira and BugHerd.',
-      tech: ['Java', 'Spring Boot', 'React 19', 'MySQL', 'Microservices', 'REST APIs'],
-      metrics: 'Enterprise Release Center',
+      title: 'TestDesk',
+      category: 'QA Management SaaS',
+      description: 'QA test management and defect tracking platform with hierarchical test suites and role-scoped access.',
+      tech: ['React (TypeScript)', 'Python', 'Flask', 'MySQL', 'REST APIs'],
+      github: 'https://github.com/prajwalpatil16/TestDesk',
       features: [
-        'Hierarchical test suite repositories & requirement mapping.',
-        'Defect tracking, issue severity workflows, release management.',
-        'Java Spring Boot microservice architecture with role-based auth.',
+        'Hierarchical test suite repository with drag-and-drop ordering and test run tracking.',
+        'Defect tracking lifecycle with severity classifications, reproduction steps, and assignment routing.',
+        'Interactive Kanban boards, team collaboration module, and project-scoped RBAC.',
       ],
+      icon: <CheckSquare className="w-5 h-5 text-[#B52B27]" />,
+    },
+    {
+      id: 'notely',
+      number: '03',
+      title: 'Notely',
+      category: 'AI Knowledge Workspace',
+      description: 'Markdown note-taking platform with an AI chat layer grounded on user notes and force-directed knowledge graph.',
+      tech: ['React 19', 'Python', 'Flask', 'Google Gemini API', 'MySQL'],
+      github: 'https://github.com/prajwalpatil16/notely',
+      features: [
+        'Markdown note editor with nested folders, tag hierarchies, and version rollback.',
+        'RAG chat assistant grounded in the user\'s personal notes via Google Gemini API.',
+        '2D/3D force-directed knowledge graph visualizing conceptual connections between notes.',
+      ],
+      icon: <Sparkles className="w-5 h-5 text-[#B52B27]" />,
     },
     {
       id: 'swiftbim',
-      number: '03',
-      title: 'SWIFTBIM AUTOMATION ⚙️',
-      category: 'Business Workflows',
-      description: 'Digitized SwiftBIM core sales-to-delivery operations transforming a manual workflow into an end-to-end enterprise platform.',
-      tech: ['Python (Flask)', 'React.js', 'MySQL', 'REST APIs', 'State Machines'],
-      metrics: 'Enquiry → Proposal → Contract',
+      number: '04',
+      title: 'SwiftBIM',
+      category: 'Operations Management',
+      description: 'Centralized sales-to-delivery operations portal replacing manual hand-offs with structured workflows.',
+      tech: ['React 19', 'Python', 'Flask', 'MySQL', 'REST APIs', 'Tailwind CSS'],
       features: [
-        'End-to-end sales-to-delivery pipeline automation.',
-        'Authentication, contract state machines, task execution tracking.',
-        'Built production features across React.js, Flask, and MySQL.',
+        'Digitized sales-to-delivery operations into an integrated web portal at MINE IT.',
+        'Structured pipelines for enquiry intake, proposal drafting, contract signing, and task tracking.',
+        'Role-scoped dashboards for sales engineers, project leads, and management.',
       ],
+      icon: <Layers className="w-5 h-5 text-[#B52B27]" />,
+    },
+    {
+      id: 'siddashree',
+      number: '05',
+      title: 'Siddashree Institute',
+      category: 'Live Educational Portal',
+      description: 'Production website and management portal deployed for a real educational institution.',
+      tech: ['React', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3'],
+      live: 'https://siddashree.org',
+      features: [
+        'Production website serving active students, parents, and administrative staff.',
+        'Structured portal for academic announcements, program catalogs, and admission inquiries.',
+        'Clean, responsive mobile UI optimized for fast page loads and clear navigation.',
+      ],
+      icon: <GraduationCap className="w-5 h-5 text-[#B52B27]" />,
     },
   ];
 
   return (
-    <section id="missions" className="py-12 sm:py-16 px-4 sm:px-6 md:px-12 border-b-2 border-editorial-heavy max-w-7xl mx-auto space-y-8 select-none">
-      {/* Section Header */}
-      <div className="flex items-end justify-between border-b-2 border-editorial-heavy pb-6 flex-wrap gap-4">
-        <div>
-          <span className="font-mono-code text-xs text-[var(--crimson-red)] uppercase tracking-widest font-bold block mb-1">
-            03 / FEATURED WORKS
-          </span>
-          <h2 className="font-antonio text-4xl sm:text-6xl md:text-7xl text-[var(--text-charcoal)] font-extrabold uppercase tracking-tight leading-none">
-            SELECTED PROJECTS
-          </h2>
-        </div>
+    <section id="missions" className="py-16 sm:py-24 px-4 sm:px-6 md:px-8 border-b-2 border-editorial-heavy select-none">
+      <div className="max-w-[1100px] mx-auto space-y-8">
+        {/* Section Header */}
+        <div className="flex items-end justify-between border-b-2 border-editorial-heavy pb-5 flex-wrap gap-4">
+          <div>
+            <span className="font-mono-code text-xs text-[#B52B27] uppercase tracking-widest font-bold block mb-1">
+              03 / FEATURED PROJECTS
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-[#121316] font-extrabold uppercase tracking-tight leading-none">
+              SELECTED WORK
+            </h2>
+          </div>
 
-        {/* View Switcher */}
-        <div className="flex items-center gap-1 bg-[var(--bg-paper-subtle)] p-1 rounded-lg border-2 border-editorial-heavy font-mono-code text-xs">
-          <button
-            onClick={() => setViewMode('grid')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded cursor-pointer transition-all ${
-              viewMode === 'grid'
-                ? 'bg-[var(--text-charcoal)] text-[var(--bg-paper)] font-bold'
-                : 'text-[var(--text-muted)] hover:text-[var(--text-charcoal)]'
-            }`}
-          >
-            <LayoutGrid className="w-3.5 h-3.5" />
-            <span>GRID VIEW</span>
-          </button>
-          <button
-            onClick={() => setViewMode('list')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded cursor-pointer transition-all ${
-              viewMode === 'list'
-                ? 'bg-[var(--text-charcoal)] text-[var(--bg-paper)] font-bold'
-                : 'text-[var(--text-muted)] hover:text-[var(--text-charcoal)]'
-            }`}
-          >
-            <List className="w-3.5 h-3.5" />
-            <span>LIST VIEW</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Grid View */}
-      {viewMode === 'grid' && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((p) => (
-            <div
-              key={p.id}
-              className="group relative p-6 bg-[var(--bg-card)] border-2 border-editorial-heavy rounded-xl flex flex-col justify-between hover:shadow-2xl transition-all"
+          {/* View Switcher */}
+          <div className="flex items-center gap-1 bg-[#DBD3C5] p-1 rounded-lg border border-[#121316]/50 font-mono-code text-xs">
+            <button
+              onClick={() => setViewMode('grid')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded cursor-pointer transition-all ${
+                viewMode === 'grid'
+                  ? 'bg-[#121316] text-[#E6DFD3] font-bold shadow-sm'
+                  : 'text-[#4A4A52] hover:text-[#121316]'
+              }`}
             >
-              <div>
-                <div className="flex items-center justify-between font-mono-code text-xs text-[var(--text-muted)] mb-3">
-                  <span className="font-antonio text-4xl text-[var(--crimson-red)] font-bold">{p.number}</span>
-                  <span className="uppercase font-bold text-[var(--text-charcoal)]">{p.category}</span>
-                </div>
-
-                <h3 className="font-antonio text-2xl sm:text-3xl text-[var(--text-charcoal)] mb-3 tracking-wide group-hover:text-[var(--crimson-red)] transition-colors leading-tight">
-                  {p.title}
-                </h3>
-
-                <p className="font-serif-editorial text-sm text-[var(--text-muted)] mb-4 leading-relaxed italic">
-                  "{p.description}"
-                </p>
-
-                <div className="inline-block px-3 py-1 bg-[var(--crimson-red)] text-white border border-black font-mono-code text-xs font-bold mb-4">
-                  ⚡ {p.metrics}
-                </div>
-
-                <div className="space-y-1.5 pt-2 border-t border-editorial-heavy/30 font-sans-editorial text-xs text-[#4A4A52]">
-                  {p.features.map((feat, fIdx) => (
-                    <div key={fIdx} className="flex items-start gap-1.5">
-                      <span className="text-[var(--crimson-red)] font-bold">•</span>
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-editorial-heavy space-y-3 mt-4">
-                <div className="flex flex-wrap gap-1.5">
-                  {p.tech.map((t, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-0.5 rounded font-mono-code text-[10px] bg-[var(--bg-paper)] border border-editorial-heavy font-bold text-[var(--text-charcoal)]"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                {p.github && (
-                  <div className="pt-2 flex items-center justify-between">
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-mono-code text-xs font-bold text-[var(--crimson-red)] flex items-center gap-1 group-hover:translate-x-1 transition-transform"
-                    >
-                      <span>VIEW CODE ON GITHUB</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
+              <LayoutGrid className="w-3.5 h-3.5" />
+              <span>GRID</span>
+            </button>
+            <button
+              onClick={() => setViewMode('list')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded cursor-pointer transition-all ${
+                viewMode === 'list'
+                  ? 'bg-[#121316] text-[#E6DFD3] font-bold shadow-sm'
+                  : 'text-[#4A4A52] hover:text-[#121316]'
+              }`}
+            >
+              <List className="w-3.5 h-3.5" />
+              <span>LIST</span>
+            </button>
+          </div>
         </div>
-      )}
 
-      {/* List View */}
-      {viewMode === 'list' && (
-        <div className="border-2 border-editorial-heavy rounded-xl overflow-hidden bg-[var(--bg-card)]">
-          <table className="w-full text-left font-sans-editorial text-sm border-collapse">
-            <thead>
-              <tr className="border-b-2 border-editorial-heavy bg-[var(--bg-paper-subtle)] font-mono-code text-xs text-[var(--text-charcoal)] font-bold uppercase">
-                <th className="p-4">NO.</th>
-                <th className="p-4">PROJECT TITLE</th>
-                <th className="p-4">CATEGORY</th>
-                <th className="p-4">STACK</th>
-                <th className="p-4 text-right">ACTION</th>
-              </tr>
-            </thead>
-            <tbody>
-              {projects.map((p) => (
-                <tr key={p.id} className="border-b border-editorial-heavy hover:bg-[var(--bg-paper-subtle)] transition-colors">
-                  <td className="p-4 font-antonio text-2xl text-[var(--crimson-red)] font-bold">{p.number}</td>
-                  <td className="p-4 font-antonio text-2xl text-[var(--text-charcoal)]">{p.title}</td>
-                  <td className="p-4 font-mono-code text-xs text-[var(--text-muted)] font-bold">{p.category}</td>
-                  <td className="p-4">
-                    <div className="flex flex-wrap gap-1">
-                      {p.tech.map((t, idx) => (
-                        <span key={idx} className="px-2 py-0.5 rounded bg-[var(--bg-paper)] font-mono-code text-[10px] border border-editorial-heavy font-bold">
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  </td>
-                  <td className="p-4 text-right">
-                    {p.github ? (
+        {/* Grid View */}
+        {viewMode === 'grid' ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            {projects.map((p) => (
+              <div
+                key={p.id}
+                className="p-6 bg-[#ECE5D9] border-2 border-[#121316] rounded-xl shadow-sm card-hover flex flex-col justify-between h-full space-y-5"
+              >
+                {/* Top Section */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between border-b border-[#121316]/25 pb-2.5">
+                    <span className="font-display text-2xl text-[#B52B27] font-bold">
+                      {p.number}
+                    </span>
+                    <span className="font-mono-code text-[11px] font-bold text-[#4A4A52] uppercase bg-[#DBD3C5] px-2 py-0.5 rounded border border-[#121316]/30">
+                      {p.category}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    {p.icon}
+                    <h3 className="font-display text-2xl text-[#121316] font-bold uppercase tracking-tight">
+                      {p.title}
+                    </h3>
+                  </div>
+
+                  <p className="font-sans-editorial text-xs sm:text-sm text-[#4A4A52] leading-relaxed">
+                    {p.description}
+                  </p>
+
+                  {/* 3 Bullets Max */}
+                  <ul className="space-y-1.5 font-sans-editorial text-xs text-[#4A4A52] pt-1">
+                    {p.features.map((feat, fIdx) => (
+                      <li key={fIdx} className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#B52B27] shrink-0 mt-1.5" />
+                        <span className="leading-snug">{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Bottom Section: Tech Tags & Links */}
+                <div className="pt-3 border-t border-[#121316]/20 space-y-3">
+                  <div className="flex flex-wrap gap-1">
+                    {p.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="px-2 py-0.5 bg-[#E6DFD3] border border-[#121316] font-mono-code text-[10px] font-bold text-[#121316] rounded"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-2 pt-1 font-mono-code text-xs font-bold">
+                    {p.github && (
                       <a
                         href={p.github}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-block px-3 py-1 rounded bg-[var(--text-charcoal)] text-[var(--bg-paper)] font-mono-code text-xs font-bold hover:bg-[var(--crimson-red)] transition-colors"
+                        className="flex-1 flex items-center justify-center gap-1.5 py-1.5 px-3 bg-[#121316] text-white hover:bg-[#B52B27] rounded-lg border border-[#121316] transition-colors"
                       >
-                        GITHUB
+                        <FolderGit2 className="w-3.5 h-3.5" />
+                        <span>GITHUB</span>
                       </a>
-                    ) : (
-                      <span className="font-mono-code text-xs text-[var(--text-muted)] font-bold">PROD</span>
                     )}
-                  </td>
-                </tr>
+
+                    {p.live && (
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex-1 flex items-center justify-center gap-1.5 py-1.5 px-3 bg-[#B52B27] text-white hover:bg-[#121316] rounded-lg border border-[#121316] transition-colors"
+                      >
+                        <span>LIVE SITE</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+
+                    {!p.github && !p.live && (
+                      <span className="w-full text-center py-1.5 px-3 bg-[#DBD3C5] border border-[#121316]/40 rounded-lg text-[11px] text-[#4A4A52]">
+                        INTERNAL PRODUCTION PLATFORM
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          /* List View */
+          <div className="bg-[#ECE5D9] border-2 border-[#121316] rounded-xl overflow-hidden shadow-sm">
+            <div className="divide-y divide-[#121316]/20">
+              {projects.map((p) => (
+                <div
+                  key={p.id}
+                  className="p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#E6DFD3] transition-colors"
+                >
+                  <div className="space-y-1.5 max-w-2xl">
+                    <div className="flex items-center gap-3">
+                      <span className="font-display text-2xl text-[#B52B27] font-bold">
+                        {p.number}
+                      </span>
+                      <h3 className="font-display text-2xl text-[#121316] font-bold uppercase">
+                        {p.title}
+                      </h3>
+                      <span className="font-mono-code text-[10px] text-[#4A4A52] font-bold bg-[#DBD3C5] px-2 py-0.5 rounded border border-[#121316]/30">
+                        {p.category}
+                      </span>
+                    </div>
+
+                    <p className="font-sans-editorial text-xs sm:text-sm text-[#4A4A52]">
+                      {p.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-1 pt-1">
+                      {p.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="px-2 py-0.5 bg-white border border-[#121316] font-mono-code text-[10px] font-bold text-[#121316] rounded"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 self-start md:self-auto font-mono-code text-xs font-bold shrink-0">
+                    {p.github && (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-[#121316] text-white hover:bg-[#B52B27] rounded-lg transition-colors"
+                      >
+                        <FolderGit2 className="w-3.5 h-3.5" />
+                        <span>GITHUB</span>
+                      </a>
+                    )}
+                    {p.live && (
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-[#B52B27] text-white hover:bg-[#121316] rounded-lg transition-colors"
+                      >
+                        <span>LIVE</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                    {!p.github && !p.live && (
+                      <span className="font-mono-code text-xs text-[#4A4A52] bg-[#DBD3C5] px-2.5 py-1 rounded">
+                        INTERNAL
+                      </span>
+                    )}
+                  </div>
+                </div>
               ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+            </div>
+          </div>
+        )}
+
+        {/* Case Studies Link Banner */}
+        {onExploreDeepDive && (
+          <div className="p-6 bg-[#DBD3C5] border-2 border-[#121316] rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+            <div className="space-y-1">
+              <span className="font-mono-code text-[11px] font-bold text-[#B52B27] uppercase tracking-wider block">
+                DETAILED WRITE-UPS
+              </span>
+              <h4 className="font-display text-2xl sm:text-3xl font-extrabold uppercase text-[#121316] leading-tight">
+                LOOKING FOR COMPLETE CASE STUDIES &amp; CODE ARCHITECTURE?
+              </h4>
+              <p className="font-sans-editorial text-xs sm:text-sm text-[#4A4A52]">
+                Explore in-depth problem statements, solutions, schema decisions, and production code snippets in the dedicated Case Studies section.
+              </p>
+            </div>
+            <button
+              onClick={onExploreDeepDive}
+              className="px-5 py-2.5 bg-[#121316] text-[#E6DFD3] hover:bg-[#B52B27] hover:text-white rounded-xl border-2 border-[#121316] font-display text-base font-bold uppercase tracking-wider transition-colors cursor-pointer shrink-0 shadow-sm btn-press"
+            >
+              VIEW CASE STUDIES →
+            </button>
+          </div>
+        )}
+      </div>
     </section>
   );
 };
